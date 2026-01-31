@@ -1,0 +1,8 @@
+# virtual folder
+/venv/*
+
+# database ignore
+/url_shorter
+
+# bytecode ignore
+**/__pycache__
