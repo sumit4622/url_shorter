@@ -1,4 +1,4 @@
-#!/home/sumit-ray/url_shorter/venv/bin/python3
+#!/home/sumit-ray/url_shorter/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
