@@ -2,7 +2,7 @@
 /venv/*
 
 # database ignore
-/url_shorter
+/url_shorter/db.sqlite3
 
 # bytecode ignore
 **/__pycache__

@@ -1,0 +1,77 @@
+<section
+  class="relative min-h-screen flex items-center justify-center lg:px-[78px] overflow-hidden bg-gray-800"
+>
+  <div
+    class="max-w-7xl w-full grid md:grid-cols-2 gap-16 items-center relative z-10"
+  >
+    <div class="animate-fadeInUp px-4">
+      <h1
+        class="font-display text-5xl md:text-6xl lg:text-7xl leading-tight mb-6 text-white"
+      >
+        Shorten URLs. <span class="text-indigo-400">Track Everything.</span>
+      </h1>
+      <p class="text-gray-300 text-xl mb-8 max-w-lg">
+        Transform lengthy URLs into sleek, shareable links. Monitor clicks,
+        analyze traffic, and manage all your links in one powerful dashboard.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 mb-12">
+        <a
+          class="px-8 py-4 rounded-lg font-semibold bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 shadow-lg hover:scale-105 hover:-translate-y-0.5 hover:bg-indigo-600 transition-all text-center"
+        >
+          Go to Dashboard
+        </a>
+        <a
+          class="px-8 py-4 rounded-lg font-semibold bg-indigo-500 text-white shadow-lg shadow-indigo-500/30 shadow-lg hover:scale-105 hover:-translate-y-0.5 hover:bg-indigo-600 transition-all text-center"
+        >
+          Start Shortening Free
+        </a>
+        <a
+          href="#how-it-works"
+          class="px-8 py-4 rounded-lg font-semibold border-2 border-indigo-500 text-white hover:bg-indigo-600 hover:scale-105 hover:-translate-y-0.5 hover:text-white transition-all text-center"
+        >
+          See How It Works
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="bg-gray-900 border border-indigo-500/20 rounded-3xl hover:border-indigo-500 p-10 shadow-2xl shadow-black/50 animate-fadeInUp hover:shadow-lg hover:shadow-indigo-500/20"
+    >
+      <div class="text-lg font-semibold mb-6 text-indigo-400"></div>
+
+      <div class="flex gap-4 mb-[16px]">
+        <input
+          type="url"
+          name="long_url"
+          placeholder="Paste your long URL here..."
+          required
+          class="flex-1 px-4 py-3 bg-gray-800 border-2 border-indigo-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
+        />
+        <button
+          type="submit"
+          class="px-8 py-3 rounded-xl font-semibold bg-indigo-500 text-white shadow-lg hover:scale-105 hover:-translate-y-0.5 hover:bg-indigo-600 transition-all"
+        >
+          Shorten
+        </button>
+      </div>
+      <div class="flex gap-4 mb-[16px]">
+        <input
+          type="text"
+          name="custom_alias"
+          placeholder="Custom alias (optional)"
+          pattern="[a-zA-Z0-9-_]+"
+          title="Only letters, numbers, hyphens, and underscores allowed"
+          class="flex-1 px-4 py-3 bg-gray-800 border-2 border-indigo-500/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 transition-all"
+        />
+
+        <button
+          type="submit"
+          class="px-11 py-3 rounded-xl font-semibold bg-indigo-500 text-white shadow-lg hover:scale-105 hover:-translate-y-0.5 hover:bg-indigo-600 transition-all"
+        >
+          Copy
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
