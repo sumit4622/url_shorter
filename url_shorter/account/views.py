@@ -7,6 +7,8 @@ from .models import User
 
 
 def login (request):
+    if request.method == 'POST':
+        print("hello world")
     return render(request,'account/sign-in.html')
 
 
