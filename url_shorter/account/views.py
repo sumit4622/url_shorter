@@ -9,6 +9,8 @@ from .models import User
 def login (request):
     if request.method == 'POST':
         print("hello world")
+        if request.request.POST.get('emial'):
+            return 'sumit'
     return render(request,'account/sign-in.html')
 
 
