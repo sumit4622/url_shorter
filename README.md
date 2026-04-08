@@ -1,6 +1,6 @@
 # 🔗 URL Shortener Project
 
-A robust URL shortening service built with **Django 5.x** and **Python**. This project features a full CI/CD pipeline, automated testing, and a clean backend architecture.
+A robust URL shortening service built with **Django 6.0.1** and **Python**. This project features a full CI/CD pipeline, automated testing, and a clean backend architecture.
 
 ---
 
