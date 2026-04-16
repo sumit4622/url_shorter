@@ -1,0 +1,41 @@
+version: "3.8"
+
+services:
+  # The PostgreSQL Database Service
+  db:
+    image: postgres:15
+    container_name: django_db
+    restart: always
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      # This ensures your data survives if the container is deleted
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5431"
+
+  # The Django Web Service
+  web:
+    build: .
+    container_name: django_web
+    ports:
+      - "8000:8000"
+    # Mounts your current directory to the container for live-coding
+    volumes:
+      - .:/usr/local/app
+    environment:
+      - DEBUG=1
+      # These match the settings in the 'db' service above
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASS=${DB_PASS}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+    # Ensures the database starts before the web app
+    depends_on:
+      - db
+
+volumes:
+  postgres_data:
