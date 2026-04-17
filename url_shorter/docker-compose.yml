@@ -22,12 +22,10 @@ services:
     container_name: django_web
     ports:
       - "8000:8000"
-    # Mounts your current directory to the container for live-coding
     volumes:
       - .:/usr/local/app
     environment:
       - DEBUG=1
-      # These match the settings in the 'db' service above
       - DB_NAME=${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASS=${DB_PASS}
