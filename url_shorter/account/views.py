@@ -8,9 +8,8 @@ from .models import User
 
 def login (request):
     if request.method == 'POST':
-        print("hello world")
-        if request.request.POST.get('emial'):
-            return 'sumit'
+        pass
+        
     return render(request,'account/sign-in.html')
 
 
@@ -38,4 +37,12 @@ def register(request):
         form = registration_form()
     
     return render(request, "account/sign-up.html", {'form':form})
+
+def forgetpassword(request):
+    return render(request,'account/forgetpassword.html')
+    
+    # print("this is some thing.")
+    
+def verify_otp(request):
+    pass
 

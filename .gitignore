@@ -4,5 +4,7 @@
 # database ignore
 /url_shorter/db.sqlite3
 
+/url_shorter/url_shorter/.env
+
 # bytecode ignore
 **/__pycache__
