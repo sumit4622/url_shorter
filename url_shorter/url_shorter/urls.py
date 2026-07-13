@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path, include
 from url_shorter import views
 
+app_name = 'url_shorter'
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',views.homepage),
+    path('',views.homepage, name="homepage"),
     path('account/', include('account.urls')),
     path('shorter/', include('shorter.urls')),
 ]

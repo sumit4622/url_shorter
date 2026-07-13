@@ -126,8 +126,9 @@
               </el-dropdown>
               <div>
                 <a
+                  id="submit"
                   class="px-11 py-3 rounded-xl font-semibold bg-indigo-500 text-white shadow-lg hover:scale-105 hover:-translate-y-0.5 hover:bg-indigo-600 transition-all"
-                  href="{%url 'login_user'%}"
+                  href="{%url 'account:login_user'%}"
                 >
                   Sign-In
                 </a>
@@ -136,7 +137,7 @@
                 <a
                   type="button"
                   class="px-11 py-3 rounded-xl font-semibold bg-indigo-500 text-white shadow-lg hover:scale-105 hover:-translate-y-0.5 hover:bg-indigo-600 transition-all"
-                  href="{% url 'register_user' %}"
+                  href="{% url 'account:register_user' %}"
                 >
                   Sign-Up
                 </a>
@@ -146,6 +147,10 @@
         </div>
       </nav>
     </header>
+    <p>URL Name: {{ request.resolver_match.url_name }}</p>
+    <p>App Name:{{ request.resolver_match.app_name}}</p>
     <main>{% block content %} {% endblock %}</main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'js/app-loader.js' %}"></script>
   </body>
 </html>

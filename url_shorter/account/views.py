@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect
-from .forms import registration_form
+# from .forms import registration_form
 from django.contrib.auth.hashers import make_password
 from .models import User
+# from templates/account/forgetpassword.html
 
 # Create your views here.
 
@@ -44,5 +45,7 @@ def forgetpassword(request):
     # print("this is some thing.")
     
 def verify_otp(request):
+    # from = request.post()
+    # print(from)
     pass
 
